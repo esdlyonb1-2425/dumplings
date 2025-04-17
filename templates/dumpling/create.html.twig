@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <p>coucou je suis la page de creation de dumplings</p>
+
+{{ form_start(formulaire) }}
+
+    {{ form_widget  (formulaire.name, {
+        'attr': {
+            'placeholder': "ici le nom"
+        }
+    }) }}
+
+    {{ form_row(formulaire.filling) }}
+
+
+    <button class="btn btn-success" type="submit">Mon bouton à moi</button>
+
+{{ form_end(formulaire) }}
+
+{% endblock %}

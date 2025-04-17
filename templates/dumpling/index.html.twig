@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DumplingController!{% endblock %}
+
+{% block body %}
+
+    <h3>Les dumplings : </h3>
+
+    {% for dumpling in dumplings %}
+
+        <hr>
+            <p><strong>{{ dumpling.name }}</strong></p>
+            <p>Garniture : {{ dumpling.filling }}</p>
+
+        <a href="{{ path('app_dumpling',{id:dumpling.id} ) }}">Voir</a>
+        <a href="{{ path('delete_dumpling',{id:dumpling.id} ) }}">Delete</a>
+        <a href="{{ path('edit_dumpling',{id:dumpling.id} ) }}">Edit</a>
+        <hr>
+        <a href="{{ path('plutot_edit',{id:dumpling.id} ) }}">Autre Edit</a>
+
+        <hr>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DumplingController!{% endblock %}
+
+{% block body %}
+
+    <h3>Le dumpling de cette page la : </h3>
+
+
+        <hr>
+            <p><strong>{{ dumpling.name }}</strong></p>
+            <p>Garniture : {{ dumpling.filling }}</p>
+
+        <a href="{{ path('app_dumplings') }}">Retour</a>
+        <hr>
+
+
+
+{% endblock %}

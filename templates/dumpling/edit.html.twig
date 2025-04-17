@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% form_theme formulaire 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(formulaire) }}
+    {{ form_row(formulaire.name) }}
+    {{ form_row(formulaire.filling) }}
+    <button type="submit">OK</button>
+    {{ form_end(formulaire) }}
+
+
+
+{% endblock %}

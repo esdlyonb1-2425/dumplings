@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {% if editMode %}
+        <p>coucou je suis la page d'édition de dumplings</p>
+
+
+    {% else %}
+
+        <p>coucou je suis la page de creation de dumplings</p>
+
+    {% endif %}
+
+
+{{ form_start(formulaire) }}
+
+    {{ form_widget  (formulaire.name, {
+        'attr': {
+            'placeholder': "ici le nom"
+        }
+    }) }}
+
+    {{ form_row(formulaire.filling) }}
+
+
+    <button type="submit">Mon bouton à moi</button>
+
+{{ form_end(formulaire) }}
+
+{% endblock %}

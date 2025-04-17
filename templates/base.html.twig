@@ -12,6 +12,14 @@
         {% endblock %}
     </head>
     <body>
+    <hr>
+    <a href="{{ path('create_dumpling') }}">Create</a>
+    <a href="{{ path('plutot_create') }}">l'Autre Create</a>
+    <hr>
+
+    <div class="container">
         {% block body %}{% endblock %}
+
+    </div>
     </body>
 </html>
